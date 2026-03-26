@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RAE-AR: Taming Autoregressive Models with Representation Autoencoders</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -32,7 +31,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-    <link rel="icon" 🥥>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥥</text></svg>">
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -67,11 +66,9 @@
           <a class="navbar-item" href="https://yuhuustc.github.io//projects/VideoMAR.html">
             VideoMAR
           </a>
-
         </div>
       </div>
     </div>
-
   </div>
 </nav>
 
@@ -81,17 +78,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-<!--           <h1 class="title is-3 publication-title">RAE-AR: Taming Autoregressive Models with Representation Autoencoders</h1> -->
-          <h1 class="title is-1 publication-title" style="display: flex; align-items: center;">
-              <!-- <i class="animate-x-icon" style="font-size: 180px; margin-right: 0px;"></i> -->
-              <span style="margin-left: 0px;">
-                <span style="color: black; font-weight: bold;  font-size: 45px;">RAE-AR: Taming Autoregressive Models
-                </span></br>
-                <span style="color: black; font-weight: bold;  font-size: 45px;"> with Representation Autoencoders
-                </span></br>
-                <!-- <span style="color: white; font-weight: bold;  font-size: 52px;">Motion Representation</span> -->
-
-              </span>
+          <h1 class="title is-1 publication-title">
+             <span style="color: black; font-weight: bold; font-size: 45px;">RAE-AR: Taming Autoregressive Models<br>with Representation Autoencoders</span>
           </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -108,7 +96,6 @@
               <a href="https://nanduan.github.io/">Nan Duan</a><sup>2</sup>,</span>
             <span class="author-block">
               <a href="https://bivlab123.github.io/">Feng Zhao</a><sup>1</sup></span>
-           
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -120,7 +107,6 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
                 <a href="http://arxiv.org/abs/2503.05305"
                    class="external-link button is-normal is-rounded is-dark">
@@ -130,17 +116,6 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
-              <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/yuhuUSTC/FAR"
                    class="external-link button is-normal is-rounded is-dark">
@@ -150,16 +125,12 @@
                   <span>Code</span>
                   </a>
               </span>
-
               <span class="link-block">
                 <a href="https://huggingface.co/figereatfish/FAR"
                    class="external-link button is-normal is-rounded is-dark">
-
                   <span>🤗 HuggingFace Model</span>
                   </a>
               </span>
-              
-              
             </div>
           </div>
         </div>
@@ -168,8 +139,7 @@
   </div>
 </section>
 
-
-<section class="hero is-light is-big", style="margin-top: -35px">
+<section class="hero is-light is-big" style="margin-top: -35px">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-fifths">
@@ -180,22 +150,20 @@
     </div>
 
     <div class="columns is-centered">
-      <div class="columns is-centered has-text-centered">
-      <div class="column is-five-fifths">
+      <div class="column is-10 has-text-left">
         <p style="font-size: 20px;">
-        1. We propose the <span style="color: rgb(199, 9, 9)"><b>FAR paradigm, leveraging the spectral dependency of image data.</b></span> FAR fits the causality requirement of AR models and preserves the spatial locality of image data, while being more sampling efficient.
+        1. We systematically investigate the integration of <span style="color: rgb(199, 9, 9)"><b>Representation Autoencoders (e.g., DINO, SigLIP, MAE)</b></span> into continuous autoregressive (AR) models, an area previously considered inappropriate for generative modeling.
         </p>
         <br>
         <p style="font-size: 20px;">
-        2. We delve into the  <span style="color: rgb(131, 102, 7)"><b>instantiation of FAR with the continuous tokenizer</b></span>, introducing a series of techniques to address the optimization challenges and improve the efficiency of both training and inference. FAR only needs <b>10</b> steps to generate an image.
+        2. We identify two primary hurdles restricting RAEs in AR generation:  <span style="color: rgb(131, 102, 7)"><b>complex token-wise distribution modeling</b></span> and the <span style="color: rgb(131, 102, 7)"><b>high-dimensionality amplified training-inference gap (exposure bias)</b></span>.
         </p>
         <br>
         <p style="font-size: 20px;">
-        3. We demonstrate the effectiveness and scalability of FAR through comprehensive experiments  <span style="color: rgb(4, 23, 107)"><b>on ImageNet dataset and further extend FAR to text-to-image generation.</b></span>
+        3. We propose <span style="color: rgb(4, 23, 107)"><b>Token Distribution Normalization</b></span> to ease modeling difficulty and <span style="color: rgb(4, 23, 107)"><b>Gaussian Noise Injection</b></span> during training to mitigate exposure bias. These strategies successfully bridge the gap, enabling RAEs to achieve performance comparable to traditional VAEs.
         </p>
         <br><br>
       </div>
-    </div>
     </div>
   </div>
 </section>
@@ -203,7 +171,6 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
@@ -211,7 +178,7 @@
           <p>
             The latent space of generative modeling is long dominated by the VAE encoder. The latents from the  pretrained representation encoders (e.g., DINO, SigLIP, MAE) are previously considered inappropriate for generative modeling. 
             Recently, RAE method lights the hope and reveals that the representation autoencoder can also achieve competitive performance as the VAE encoder. However, the integration of representation autoencoder into continuous autoregressive (AR) models, remains largely unexplored.
-            In this work, we investigate the challenges of employing high-dimensional representation autoencoders within the AR paradigm, denoted as \textit{RAE-AR}.
+            In this work, we investigate the challenges of employing high-dimensional representation autoencoders within the AR paradigm, denoted as <i>RAE-AR</i>.
             We focus on the unique properties of AR models and identify two primary hurdles: complex token-wise distribution modeling and the high-dimensionality amplified training-inference gap (exposure bias).
             To address these, we introduce token simplification via distribution normalization to ease modeling difficulty and improve convergence. 
             Furthermore, we enhance prediction robustness by incorporating Gaussian noise injection during training to mitigate exposure bias. Our empirical results demonstrate that these modifications substantially bridge the performance gap, enabling representation autoencoder to achieve results comparable to traditional VAEs on AR models. 
@@ -222,94 +189,88 @@
     </div>
   </div>
 </section>
-    <!--/ Abstract. -->
-
-
-
 
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3"> Challenges and Solutions</h2>
+        <h2 class="title is-3">Challenges and Solutions</h2>
       </div>
     </div>
-    <div class="columns is-centered ">
-      <div class="column is-full-width">
-        <div class="column is-centered ">
-      <img src="./static/images/RAE-AR/main.png"
-                class="framework-image"
-                alt="framework overview image."/>
+    <div class="columns is-centered">
+      <div class="column is-10 has-text-centered">
+        <img src="./static/images/RAE-AR/main.png" style="max-width: 80%; margin: 0 auto; display: block;" alt="Framework overview showing challenges and solutions"/>
+        <p class="has-text-justified mt-4">
+          <strong>Overview of RAE-AR:</strong> We identify two core challenges (complex token variance and exposure bias) when applying representation autoencoders directly to autoregressive models. To resolve this, we propose token distribution normalization to accelerate convergence and Gaussian noise perturbation to enhance robustness against exposure bias.
+        </p>
+      </div>
     </div>
   </div>
-</div>
-</div>
 </section>
 
-  
-<section class="section">
-  <div class="container is-max-widescreen">
-    <div class="columns is-centered has-text-centered">
+<section class="section is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered mb-5">
       <div class="column is-full-width">
-        <h2 class="title is-3"> Reconstruction Performance of RAE</h2>
+        <h2 class="title is-3">Performance of Native Representation Autoencoders</h2>
       </div>
     </div>
-    <div class="columns is-centered ">
-      <div class="column is-full-width">
-        <div class="column is-centered ">
-      <img src="./static/images/RAE-AR/rec.png"
-                class="exp256-image"
-                alt="exp256 image."/>
-      <br>
-      <img src="./static/images/RAE-AR/rec_vis.png"
-                class="exp512-image"
-                alt="exp512 image."/>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-10">
+        <h3 class="title is-4">1. Reconstruction Performance of RAE</h3>
+        
+        <h4 class="title is-5 mt-5">Quantitative Results</h4>
+        <img src="./static/images/RAE-AR/rec.png" style="max-width: 75%; margin: 0 auto; display: block;" alt="Quantitative reconstruction results"/>
+        <p class="has-text-centered mt-3 mb-5">
+           Quantitative comparison of reconstruction metrics between standard VAEs and representation autoencoders (DINOv2, SigLIP2, MAE).
+        </p>
+
+        <h4 class="title is-5">Qualitative Results</h4>
+        <img src="./static/images/RAE-AR/rec_vis.png" style="max-width: 75%; margin: 0 auto; display: block;" alt="Qualitative reconstruction results"/>
+        <p class="has-text-centered mt-3 mb-6">
+           Visual comparison of reconstructed images. While RAEs maintain reasonable semantic structure, they can sometimes exhibit blurriness in fine details compared to VAEs.
+        </p>
+      </div>
     </div>
+
+    <div class="columns is-centered has-text-centered mt-6">
+      <div class="column is-10">
+        <h3 class="title is-4">2. Generation Performance of RAE on AR Models</h3>
+        <img src="./static/images/RAE-AR/gen.png" style="max-width: 75%; margin: 0 auto; display: block;" alt="Generation performance comparison"/>
+        <p class="has-text-centered mt-3">
+          Directly applying standard representation autoencoders to AR models leads to poor generation performance. This severe degradation validates the significant impact of the identified token variance and exposure bias issues.
+        </p>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered mb-5">
       <div class="column is-full-width">
-        <h2 class="title is-3"> Generation Performance of RAE on Autoregressive Model</h2>
+        <h2 class="title is-3">Main Experiment Results — RAE-AR</h2>
       </div>
     </div>
-    <div class="columns is-centered ">
-      <div class="column is-full-width">
-        <div class="column is-centered ">
-      <img src="./static/images/RAE-AR/gen.png"
-                class="framework-image"
-                alt="framework overview image."/>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-10">
+        <h4 class="title is-4 mt-4">Quantitative Results</h4>
+        <img src="./static/images/RAE-AR/performance.png" style="max-width: 75%; margin: 0 auto; display: block;" alt="Quantitative results of RAE-AR"/>
+        <p class="has-text-centered mt-3 mb-6">
+          Quantitative ablation studies demonstrating that our proposed techniques (Token Normalization and Noise Injection) significantly bridge the performance gap, making RAEs competitive with VAEs.
+        </p>
+
+        <h4 class="title is-4">Qualitative Results</h4>
+        <img src="./static/images/RAE-AR/comparison_vis.png" style="max-width: 75%; margin: 0 auto; display: block;" alt="Qualitative results of RAE-AR"/>
+        <p class="has-text-centered mt-3">
+          Visual generation results. Compared to the baseline models which struggle with severe artifacts, our RAE-AR framework successfully produces coherent, high-fidelity images across different semantic spaces.
+        </p>
+      </div>
     </div>
   </div>
-</div>
-</div>
 </section>
-
-
-<section class="section">
-  <div class="container is-max-widescreen">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3"> Main Experiment Results —— RAE-AR</h2>
-      </div>
-    </div>
-    <div class="columns is-centered ">
-      <div class="column is-full-width">
-        <div class="column is-centered ">
-      <img src="./static/images/RAE-AR/performance.png"
-                class="exp256-image"
-                alt="exp256 image."/>
-      <br>
-      <img src="./static/images/RAE-AR/comparison_vis.png"
-                class="exp512-image"
-                alt="exp512 image."/>
-    </div>
-    </div>
-</section>
-
-
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
@@ -323,18 +284,8 @@
   </div>
 </section>
       
-
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <!-- <a class="icon-link"
-         href="https://drive.google.com/file/d/1QgiG-X15kUGUMikNBg5MSROMgHvc-GhG/view?usp=drive_link">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a> -->
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
