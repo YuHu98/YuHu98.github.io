@@ -1,2 +1,2 @@
-# YuHu98.github.io
+# yuhuUSTC.github.io
 Homepage of HuYu
